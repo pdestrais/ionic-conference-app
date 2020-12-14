@@ -2,11 +2,11 @@ var express = require("express");
 var app = express();
 
 //serve static file (index.html, images, css)
-app.use(express.static(__dirname + '/www'));
+app.use(express.static(__dirname + ''));
 
 app.get('*', function (request, response) {
-  response.sendFile('index.html', {
-    root: './www'
+  response.sendFile('index2.html', {
+    root: '.'
   });
 });
 
